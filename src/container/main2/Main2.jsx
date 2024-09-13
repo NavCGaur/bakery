@@ -54,7 +54,7 @@ function Main2() {
 
 
   return (
-    <div className='main' id='Home'> 
+    <div className='main' id='home'> 
 
       <div className='main__topSection'>
         <header className='main__header'>        
@@ -63,7 +63,7 @@ function Main2() {
             
               <a className='main__navLinks' href='#home'>HOME</a>
 
-              <a className='main__navLinks' href='#story'>OUR STORY</a>
+              <a className='main__navLinks' href='#about'>OUR STORY</a>
 
               <DropDown pageId = {'#products'} title = {'Products'} dropDownData={productData} onClick={handleMenu} />
 

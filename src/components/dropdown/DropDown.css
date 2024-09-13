@@ -18,12 +18,15 @@
     backdrop-filter: unset;
     border-radius: 15px;
     width: 230px;
-    background: linear-gradient(to bottom, #E8D6B5, #D9C4A0);
+    background-color: #FFF5E1; /* Light cream background */
 
     border-left: 1px solid #cd0951;
     border-bottom: 1px solid #cd0951;
     border-right: 1px solid #cd0951;
     border-top: 1px solid #cd0951;
+
+    border: 1px solid #99264D; /* Darker pink border */
+
 
    }
 
