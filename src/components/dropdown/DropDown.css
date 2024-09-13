@@ -1,0 +1,33 @@
+.dropdown-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown__hidden{
+    display: none;
+}
+
+
+.dropdown__visible{
+    position: absolute;
+    z-index: 50;
+    top:60px;
+    right:-110%;
+    list-style: none;
+    backdrop-filter: unset;
+    border-radius: 15px;
+    width: 230px;
+    background: linear-gradient(to bottom, #E8D6B5, #D9C4A0);
+
+    border-left: 1px solid #cd0951;
+    border-bottom: 1px solid #cd0951;
+    border-right: 1px solid #cd0951;
+    border-top: 1px solid #cd0951;
+
+   }
+
+.dropdown__visible li{
+    padding: 15px;
+
+}
