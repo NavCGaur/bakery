@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 60px;
 }
 .dropdown__hidden{
     display: none;
@@ -13,24 +14,23 @@
     position: absolute;
     z-index: 50;
     top:60px;
-    right:-110%;
+    right:-90%;
     list-style: none;
     backdrop-filter: unset;
     border-radius: 15px;
-    width: 230px;
-    background-color: #FFF5E1; /* Light cream background */
-
-    border-left: 1px solid #cd0951;
-    border-bottom: 1px solid #cd0951;
-    border-right: 1px solid #cd0951;
-    border-top: 1px solid #cd0951;
-
-    border: 1px solid #99264D; /* Darker pink border */
+    width: 200px;
+    background-color: rgba(255, 245, 225, 0.6); /* Light cream with transparency */
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7); /* Adjust values for desired shadow */
 
 
    }
 
 .dropdown__visible li{
-    padding: 15px;
+    padding: 10px;
+
+}
+
+.dropdown__visible li:nth-child(1){
+    padding-top: 25px;
 
 }

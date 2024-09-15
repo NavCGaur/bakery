@@ -17,6 +17,7 @@ function App() {
     <div className="App">
       <Main2 />
       <About />
+      <Products />
     </div>
 
     </BrowserRouter>

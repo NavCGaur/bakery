@@ -25,7 +25,6 @@ function About() {
             </p>
            
 
-            <a href='#products'>OUR SPECIALITIES</a>
         
         </div>
 

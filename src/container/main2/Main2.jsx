@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react'
 
 import Logo from '../../assets/logo.png'
+import {ReactComponent as Search} from '../../assets/search.svg'
 
 import './Main2.css'
 
@@ -37,17 +38,14 @@ function Main2() {
     };
   }, []);
 
-  const productData = [{productName:'This is product one', 
+  const productData = [{productName:'Cakes', 
     link: 'product-one'},
 
-   {productName:'This is product two', 
-    link: 'product-one'},
+   {productName:'Pastries', 
+    link: 'product-two'},
 
-   {productName:'This is product three', 
-    link: 'product-one'},
-
-   {productName:'This is product four', 
-    link: 'product-one'},
+   {productName:'Biscuits and Cookies', 
+    link: 'product-three'},
 
     ];
 
@@ -65,9 +63,11 @@ function Main2() {
 
               <a className='main__navLinks' href='#about'>OUR STORY</a>
 
-              <DropDown pageId = {'#products'} title = {'Products'} dropDownData={productData} onClick={handleMenu} />
+              <DropDown pageId = {'#products'} title = {'PRODUCTS'} dropDownData={productData} onClick={handleMenu} />
 
-              <a className='main__navLinks' href='#contact'>CONTACT US</a>          
+              <a className='main__navLinks' href='#contact'>CONTACT US</a>       
+
+              <Search className='main__search'/>   
 
           </nav>
 

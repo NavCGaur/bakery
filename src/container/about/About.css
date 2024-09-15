@@ -6,53 +6,42 @@
 }
 
 .about__leftSection{
-    margin-top: 6rem;
+    margin-top: 10rem;
     width: 40%;
     margin-left: 15%;
     display: flex;
     flex-direction: column;
 }
 
-.about__leftSection p:nth-child(1){
+.about__leftSection p:nth-child(1), p:nth-child(2){
     font-size: 7rem;
     color: #D81B60; /* Keep the pink, but ensure it's dark enough */
 
     margin-bottom: 1rem;
+
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
+
+
+
 }
 
 .about__leftSection p:nth-child(2){
-    font-size: 7rem;
-    color: #71072b;
+    
     margin-bottom: 4rem;
 }
 
 .about__leftSection p:nth-child(3){
     font-size: 1.6rem;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
     letter-spacing: 0.8px;
     color: black;
     font-family:'Open Sans', sans-serif;
+    font-weight: 500;
     width: 60%;
     margin-bottom: 6rem;
 }
 
 
-.about__leftSection a{
-
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: white;
-    width: 30rem;
-    height: 7rem;
-    letter-spacing: 3px;
-
-    background: linear-gradient(to bottom, #FF4081, #99264D);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.4rem;
-    
-}
 
 .about__rightSection{
     display: flex;
@@ -63,8 +52,6 @@
     height: 445px;
 
     padding: 2rem;
-    background-color: rgba(218, 165, 32, 0.4);
-    border-radius: 15px;
 
 }
 
@@ -82,6 +69,5 @@
 
     border-radius: 15px;
     
-    border: 3px solid #F5E6D3; /* Light border matching the color theme */
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7); /* Adjust values for desired shadow */
 }
