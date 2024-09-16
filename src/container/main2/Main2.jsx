@@ -12,11 +12,18 @@ import DropDown from '../../components/dropdown/DropDown'
 function Main2() {
 
   const [menuStatus, setMenuStatus] = useState(false);
+  const [searchStatus, setSearchStatus] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
 
   function handleMenu(){
 
     setMenuStatus(!menuStatus);
 
+  }
+
+  function handleSearch(){
+    setSearchStatus(!searchStatus)
   }
 
   // Add an event listener to handle window resize
@@ -52,7 +59,7 @@ function Main2() {
 
 
   return (
-    <div className='main' id='home'> 
+    <div className='main' id='home' > 
 
       <div className='main__topSection'>
         <header className='main__header'>        
@@ -65,9 +72,11 @@ function Main2() {
 
               <DropDown pageId = {'#products'} title = {'PRODUCTS'} dropDownData={productData} onClick={handleMenu} />
 
-              <a className='main__navLinks' href='#contact'>CONTACT US</a>       
+              <a className='main__navLinks' href='#contact'>CONTACT US</a>  
 
-              <Search className='main__search'/>   
+              <input type="text" placeholder="Search for products..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className={searchStatus?"main__search-box visible":'main__search-box'} />
+
+              <Search className='main__search' onClick={handleSearch}/>   
 
           </nav>
 

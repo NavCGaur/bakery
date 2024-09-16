@@ -56,12 +56,32 @@
     justify-content: center;
 }
 
+.main__search-box{
+    display: none;
+}
+
+.main__search-box.visible{
+    display: block;
+    position: absolute;
+    margin-right: 10px;
+    padding: 5px;
+    right:15%;
+    height: 4rem;
+    border-radius: 5px;
+    background-color: oldlace;
+
+}
+
+
 .main__search{
     height: 2.5rem;
     width: 2.5rem;    
     fill: #802A2A;
     margin-left: 10%;
+    cursor: pointer;
 }
+
+
 
 
 .main__midSection{
