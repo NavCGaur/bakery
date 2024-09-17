@@ -1,7 +1,6 @@
 //React imports
-import {React, useState, useEffect} from 'react'
-
-import {Link} from 'react-router-dom';
+import {React, useState, useContext} from 'react'
+import { useProduct } from '../../product-context/ProductContext';
 
 
 //Style import
@@ -11,10 +10,14 @@ import './DropDown.css'
 function DropDown(props) {
 
   const dropDownData = props.dropDownData;
-  const pageId = props.pageId;
   const title = props.title;
 
   const [mouseOver, setMouseOver]= useState(false); 
+
+  const productContext = useProduct();
+  
+  console.log('useProduct result:', productContext); // Keep this for debugging
+
 
   function handleMouseEnter(){
     setMouseOver(true);
@@ -27,15 +30,16 @@ function DropDown(props) {
 
     return (
             <div className='dropdown-container'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseOut}>
-                <p href={pageId} className='header__products'   tabIndex={0}>
+                <p className='header__products'   tabIndex={0}>
                     {title}
                 </p>  
-                <div className={mouseOver?'dropdown__visible':'dropdown__hidden'}  >
+                <div className={mouseOver?'dropdown__visible':'dropdown__hidden'}  onClick={handleMouseOut}>
                 
 
-                  {dropDownData.map((listItem,index)=> <li key={index.listItem}>
-                                                                                <Link to={`/${listItem.link}`}> {listItem.productName}</Link>
-                                                                              </li> )}
+                  {dropDownData.map((listItem,index)=> <li key={index}>
+                  <a href='#products' onClick={() => productContext.setProduct(listItem.productCategory)}>
+                  {listItem.productCategory}</a>
+                   </li> )}
                 </div>
 
 
