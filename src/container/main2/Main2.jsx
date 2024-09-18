@@ -1,6 +1,8 @@
 //React imports
 import React, {useState, useEffect} from 'react'
 
+import { useProduct } from '../../product-context/ProductContext';
+
 
 import Logo from '../../assets/logo.png'
 import {ReactComponent as Search} from '../../assets/search.svg'
@@ -8,6 +10,7 @@ import {ReactComponent as Search} from '../../assets/search.svg'
 import './Main2.css'
 
 import DropDown from '../../components/dropdown/DropDown'
+
 
 import {productsCategory} from '../../data/productsCategory.js'
 
@@ -17,6 +20,12 @@ function Main2() {
   const [menuStatus, setMenuStatus] = useState(false);
   const [searchStatus, setSearchStatus] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const { setProduct } = useProduct(); 
+
+  function handleVisibleProducts() {
+    setProduct('All Products'); // Update product category when clicked
+  }
 
 
   function handleMenu(){
@@ -88,7 +97,7 @@ function Main2() {
           <div className='main__midSection-right'>
             <p>We bring your <br/>
             sweetest dreams to life.</p>
-            <a href='#products' > CHECK OUR PRODUCTS</a>
+            <a href='#products' onClick={handleVisibleProducts}> CHECK OUR PRODUCTS</a>
           </div>
 
       </div>

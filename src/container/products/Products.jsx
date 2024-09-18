@@ -2,9 +2,11 @@ import React from 'react';
 import './Products.css';
 import { useProduct } from '../../product-context/ProductContext';
 
-export default function Products(props) {
+import  {productsData} from '../../data/productsData'
+
+export default function Products() {
+  
   const { product, setProduct } = useProduct(); // Extract both product and setProduct from context
-  const productsData = props.productsData;
 
   function handleVisibleProducts(productCategory) {
     setProduct(productCategory); // Update product category when clicked
@@ -18,13 +20,11 @@ export default function Products(props) {
       <div className='products__bottomSection'>
         <div className='products__bottomSection-left'>
           <h2>Categories</h2>
-          <h3 className='products__allProducts' onClick={() => handleVisibleProducts('All Products')}>All Products</h3>
-          <h3 className='products__cakes' onClick={() => handleVisibleProducts('Cakes')}>Cakes</h3>
-          <h3 className='products__pastries' onClick={() => handleVisibleProducts('Pastries')}>Pastries</h3>
-          <h3 className='products__biscuits' onClick={() => handleVisibleProducts('Biscuits and Cookies')}>Biscuits and Cookies</h3>
-          <h3 className='products__specialOccasions' onClick={() => handleVisibleProducts('Special Occasions')}>
-            <i>Special Occasions</i>
-          </h3>
+          <h3 className={'All Products'===product?'products__category highlight':'products__category'} onClick={() => handleVisibleProducts('All Products')}>All Products</h3>
+          <h3 className={'Cakes'===product?'products__category highlight':'products__category'}  onClick={() => handleVisibleProducts('Cakes')}>Cakes</h3>
+          <h3 className= {'Pastries'===product?'products__category highlight':'products__category'} onClick={() => handleVisibleProducts('Pastries')}>Pastries</h3>
+          <h3 className={'Biscuits and Cookies'===product?'products__category highlight':'products__category'} onClick={() => handleVisibleProducts('Biscuits and Cookies')}>Biscuits and Cookies</h3>
+          <h3 className= {'Special Occasions'===product?'products__category highlight':'products__category'} onClick={() => handleVisibleProducts('Special Occasions')}>Special Occasions</h3>
         </div>
         <div className='products__bottomSection-right'>
           {productsData

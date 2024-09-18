@@ -18,10 +18,14 @@
     font-weight: 600;
     margin-bottom: 4rem;
     color: #cd0951;
+    font-family: 'Playfair Display', serif;
+
 }
 
 .products__topSection p{
     margin-top: 12rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
 }
 .products__bottomSection{
     display: flex;
@@ -46,9 +50,16 @@
     cursor: pointer;
  }
 
- .products__allProducts, .products__cakes, .products__specialOccasions{
-    cursor: pointer;
- }
+
+ .products__category.highlight{
+    font-weight: 800;
+    color:#cd0951;
+    font-family: 'Lato', sans-serif;
+
+    font-size: 2rem;
+    font-style:italic;
+
+}
 
  .products__bottomSection-right{
     width: 65%;

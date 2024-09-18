@@ -19,7 +19,7 @@
     backdrop-filter: unset;
     border-radius: 15px;
     width: 200px;
-    background-color: rgba(255, 245, 225, 0.6); /* Light cream with transparency */
+    background-color: rgba(255, 245, 225, 0.9); /* Light cream with transparency */
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7); /* Adjust values for desired shadow */
 
 

@@ -1,11 +1,7 @@
 export const productsCategory = [
-    {productCategory:"Cakes", 
-    productLink: "products"},
-
-   {productCategory:"Pastries", 
-    productLink: "products"},
-
-   {productCategory:"Biscuits and Cookies", 
-    productLink: "products"}
-
-    ]
+    { productCategory: 'All Products' },
+    { productCategory: 'Cakes' },
+    { productCategory: 'Pastries' },
+    { productCategory: 'Biscuits and Cookies' },
+    { productCategory: 'Special Occasions' },
+  ];

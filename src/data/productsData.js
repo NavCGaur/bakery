@@ -105,10 +105,34 @@ export const productsData = [
   },
   {
     id: 14,
-    category: "Biscuits and Cookies",
-    name: "Digestive Biscuits",
-    price: "Rs 60/-",
-    weight: "150 gm",
-    image: require("../assets/about-image-2.jpg")
+    category: "Special Occasions",
+    name: "First Birthday",
+    price: "Rs 600/-",
+    weight: "450 gm",
+    image: require("../assets/about-image-3.jpg")
+  },
+  {
+    id: 15,
+    category: "Special Occasions",
+    name: "First Anniversary",
+    price: "Rs 1120/-",
+    weight: "850 gm",
+    image: require("../assets/about-image-3.jpg")
+  },
+  {
+    id: 16,
+    category: "Special Occasions",
+    name: "25th Anniversary",
+    price: "Rs 700/-",
+    weight: "450 gm",
+    image: require("../assets/about-image-3.jpg")
+  },
+  {
+    id: 17,
+    category: "Special Occasions",
+    name: "New Year",
+    price: "Rs 600/-",
+    weight: "450 gm",
+    image: require("../assets/about-image-3.jpg")
   }
 ];

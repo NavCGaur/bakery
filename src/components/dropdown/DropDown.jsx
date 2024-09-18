@@ -1,5 +1,5 @@
 //React imports
-import {React, useState, useContext} from 'react'
+import {React, useState} from 'react'
 import { useProduct } from '../../product-context/ProductContext';
 
 
@@ -16,9 +16,6 @@ function DropDown(props) {
 
   const productContext = useProduct();
   
-  console.log('useProduct result:', productContext); // Keep this for debugging
-
-
   function handleMouseEnter(){
     setMouseOver(true);
   }
@@ -41,10 +38,6 @@ function DropDown(props) {
                   {listItem.productCategory}</a>
                    </li> )}
                 </div>
-
-
-
-
 
             </div>
 
